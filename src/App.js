@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import Header from "./components/header/Header"
-import Display from "./components/display/Display"
+import Header from "./components/header"
+import Display from "./components/display"
 import { createGlobalStyle } from "styled-components"
 
 function App() {
@@ -32,7 +32,10 @@ function App() {
     <React.Fragment>
       <GlobalStyle></GlobalStyle>
       <div className="App">
-        <Header city={weatherData ? weatherData.city : ""} />
+        <Header
+          city={weatherData ? weatherData.city : ""}
+          setCity={setWeatherData}
+        />
         {weatherData ? (
           <Display data={weatherData}></Display>
         ) : (

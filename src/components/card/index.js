@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { StyledCard } from "./styledCard"
+import { StyledCard } from "./style"
 
 const Card = ({ icon, time, temp, feels }) => {
   let clock = time.split(" ")

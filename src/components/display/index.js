@@ -1,6 +1,6 @@
 import React from "react"
-import { StyledDisplay } from "./styledDisplay"
-import Card from "../card/Card"
+import { StyledDisplay } from "./style"
+import Card from "../card"
 
 const Display = ({ data }) => {
   console.log(data.list)
