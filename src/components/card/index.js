@@ -12,9 +12,9 @@ const Card = ({ icon, time, temp, feels }) => {
         className="weather-icon"
         alt="weather-icon"
       />
-      <p className="time">Tid: {clock[1]}</p>
-      <p className="temp">Temperatur: {temp} °C</p>
-      <p className="temp">Känns som: {feels} °C</p>
+      <p className="time">Time: {clock[1]}</p>
+      <p className="temp">Temperature: {temp} °C</p>
+      <p className="temp">Feels like: {feels} °C</p>
     </StyledCard>
   )
 }
