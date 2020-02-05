@@ -7,7 +7,7 @@ export const Button = styled.button`
   width: 100px;
   vertical-align: top;
   border: none;
-  margin: 0 0 12px 0;
+  /*margin: 0 0 12px 0;*/
   background: #3bbd96;
   color: #edf5e1;
   font-weight: bold;

@@ -7,6 +7,7 @@ function App() {
   const GlobalStyle = createGlobalStyle`
   body{
     background: #34495e;
+    margin: 0;
     height:100vh;
     width: 100vw;
     overflow: hidden;
