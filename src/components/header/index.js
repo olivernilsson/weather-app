@@ -7,7 +7,7 @@ const Header = props => {
   return (
     <StyledHeaderWrapper>
       <StyledHeaderText>
-        Väder för: {props.city.name}, {props.city.country}
+        Weather for: {props.city.name}, {props.city.country}
       </StyledHeaderText>
       <SearchBar setCity={props.setCity}></SearchBar>
     </StyledHeaderWrapper>

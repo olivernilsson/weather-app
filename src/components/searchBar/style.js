@@ -17,3 +17,7 @@ export const Input = styled.input`
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 `
+export const NotFound = styled.h3`
+  font-family: "Roboto";
+  margin-top: 0;
+`
