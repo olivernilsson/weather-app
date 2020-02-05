@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react"
+import Header from "./components/header/Header"
+import Display from "./components/display/Display"
+import { createGlobalStyle } from "styled-components"
 
 function App() {
+  const GlobalStyle = createGlobalStyle`
+  body{
+    background: gray;
+    height:100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding-left: calc(100vw - 100%);
+  }
+  `
+
+  const [weatherData, setWeatherData] = useState()
+
+  useEffect(() => {
+    const getData = async () => {
+      const raw = await fetch(
+        "http://api.openweathermap.org/data/2.5/forecast?id=2692969&units=metric&cnt=4&APPID=ee38411b8e8d4549832df84d31803c99",
+      )
+      const result = await raw.json()
+      await setWeatherData(result)
+      console.log(result)
+    }
+    getData()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <React.Fragment>
+      <GlobalStyle></GlobalStyle>
+      <div className="App">
+        <Header city={weatherData ? weatherData.city : ""} />
+        {weatherData ? (
+          <Display data={weatherData}></Display>
+        ) : (
+          <p>Laddar...</p>
+        )}
+      </div>
+    </React.Fragment>
+  )
 }
 
-export default App;
+export default App
