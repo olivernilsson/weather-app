@@ -7,8 +7,9 @@ export const StyledCard = styled.div`
   position: relative;
   display: inline-block;
   text-align: center;
-  background: lightgray;
+  background: #bdc3c7;
   border-radius: 0.5rem;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
   font-family: "Roboto";
+  color: #000e21;
 `

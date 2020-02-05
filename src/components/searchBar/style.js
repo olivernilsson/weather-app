@@ -11,7 +11,7 @@ export const Input = styled.input`
   line-height: 80px;
   font-size: 2rem;
   margin: 0 0 12px 0;
-  border: 2px solid #d35400;
+  border: 2px solid #3bbd96;
   background: #edf5e1;
   align-content: stretch;
   border-top-left-radius: 0.25rem;
@@ -20,4 +20,5 @@ export const Input = styled.input`
 export const NotFound = styled.h3`
   font-family: "Roboto";
   margin-top: 0;
+  color: #000e21;
 `

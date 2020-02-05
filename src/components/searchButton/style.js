@@ -8,7 +8,7 @@ export const Button = styled.button`
   vertical-align: top;
   border: none;
   margin: 0 0 12px 0;
-  background: #d35400;
+  background: #3bbd96;
   color: #edf5e1;
   font-weight: bold;
   font-family: "Catamaran", sans-serif;

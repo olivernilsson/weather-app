@@ -6,7 +6,7 @@ import { createGlobalStyle } from "styled-components"
 function App() {
   const GlobalStyle = createGlobalStyle`
   body{
-    background: gray;
+    background: #34495e;
     height:100vh;
     width: 100vw;
     overflow: hidden;

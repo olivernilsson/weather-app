@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const StyledDisplay = styled.div`
-  background: gray;
+  background: #34495e;
   height: 500px;
   width: 80%;
   margin: 40px auto;

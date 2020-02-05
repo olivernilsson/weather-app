@@ -12,4 +12,5 @@ export const StyledHeaderText = styled.h1`
   vertical-align: middle;
   font-family: "Roboto";
   font-weight: bold;
+  color: #000e21;
 `
