@@ -3,16 +3,25 @@ import { StyledDisplay } from "./style"
 import Card from "../card"
 
 const Display = ({ data }) => {
-  console.log(data.list)
+  console.log("list", data.list)
+  let filteredData = data.list
+  let shouldSplit = true
+  if (filteredData.length > 5) {
+    filteredData = data.list.filter(function(value, index, Arr) {
+      return index % 8 === 0
+    })
+    shouldSplit = false
+  }
   return (
     <StyledDisplay>
-      {data.list.map((card, index) => {
+      {filteredData.map((card, index) => {
         return (
           <Card
             icon={card.weather[0].icon}
             temp={card.main.temp}
             feels={card.main.feels_like}
             time={card.dt_txt}
+            shouldSplit={shouldSplit}
             key={index}
           ></Card>
         )

@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const StyledHeaderWrapper = styled.div`
   height: 150px;
   width: 80%;
-  margin: 180px auto 0;
+  margin: 100px auto 0;
   text-align: center;
 `
 
