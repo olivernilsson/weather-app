@@ -44,6 +44,7 @@ function App() {
         <Header
           city={weatherData ? weatherData.city : ""}
           setCity={setWeatherData}
+          isHour={isHour}
         />
         {weatherData ? (
           <Display data={weatherData}></Display>
