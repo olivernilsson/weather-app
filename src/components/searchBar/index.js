@@ -5,24 +5,8 @@ import SearchButton from "../searchButton"
 const SearchBar = props => {
   const ref = useRef()
 
-  const [notFound, setNotFound] = useState(false)
-
-  useEffect(() => {
-    if (window.history.state) {
-      clickHandler()
-    }
-  }, [])
-
   const clickHandler = async () => {
-    setNotFound(false)
-    const raw = await fetch(
-      props.isHour
-        ? `http://api.openweathermap.org/data/2.5/forecast?q=${ref.current.value}&units=metric&cnt=5&APPID=ee38411b8e8d4549832df84d31803c99`
-        : `http://api.openweathermap.org/data/2.5/forecast?q=${ref.current.value}&units=metric&APPID=ee38411b8e8d4549832df84d31803c99`,
-    )
-    const response = await raw.json()
-    await console.log(response)
-    response.city ? await props.setCity(response) : setNotFound(true)
+    props.setSearchTerm(ref.current.value)
   }
 
   return (
@@ -33,7 +17,7 @@ const SearchBar = props => {
     >
       <Input ref={ref}></Input>
       <SearchButton clickHandler={clickHandler} />
-      <NotFound>{notFound ? "Could not find location" : ""}</NotFound>
+      <NotFound>{props.notFound ? "Could not find location" : ""}</NotFound>
     </SearchBarWrapper>
   )
 }
